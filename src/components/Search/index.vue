@@ -13,18 +13,18 @@ export default {
 
 <style lang="css">
   @block search {
-    margin: 3rem auto;
-    width: 60rem;
+    margin: 0.75rem auto;
+    width: 15rem;
 
     @element input {
-      width: 49.2rem;
-      height: 7rem;
-      line-height: 6.2rem;
-      font-size: 2.6rem;
-      text-indent: 8rem;
-      border: 0.4rem solid #66b9b3;
+      width: 12.3rem;
+      height: 1.75rem;
+      line-height: 1.55rem;
+      font-size: 0.65rem;
+      text-indent: 2rem;
+      border: 0.1rem solid #66b9b3;
       border-right: 0;
-      border-radius: 5rem 0 0 5rem;
+      border-radius: 1.25rem 0 0 1.25rem;
 
       &::placeholder {
         color: #d3d3d3;
@@ -32,10 +32,10 @@ export default {
     }
 
     @element btn {
-      width: 10rem;
-      height: 7rem;
+      width: 2.5rem;
+      height: 1.75rem;
       background: #fff url('../../assets/img/btn.png') no-repeat center;
-      background-size: 10rem 7rem;
+      background-size: 2.5rem 1.75rem;
       border: 0;
     }
   }

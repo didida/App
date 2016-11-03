@@ -99,11 +99,11 @@
 
     img {
       width: 100%;
-      height: 40rem;
+      height: 10rem;
     }
 
     .mint-swipe-indicators {
-      bottom: 3rem;
+      bottom: 0.75rem;
     }
 
     .mint-swipe-indicator {
@@ -115,6 +115,6 @@
         background-color: #f26d4f;
       }
     }
-    
+
   }
 </style>

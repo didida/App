@@ -25,38 +25,38 @@
 <style lang="css">
   @block Titlebar {
     display: flex;
-    padding: 0 3rem;
-    height: 8rem;
-    line-height: 8rem;
+    padding: 0 0.75rem;
+    height: 2rem;
+    line-height: 2rem;
     background-color: #fff;
 
     @element title {
       flex: 1;
       position: relative;
       margin: 0;
-      padding-left: 1.2rem;
-      font-size: 3rem;
+      padding-left: 0.3rem;
+      font-size: 0.75rem;
       font-weight: normal;
 
       &:after {
         content: '';
         display: block;
         position: absolute;
-        top: 2.5rem;
+        top: 0.63rem;
         left: 0;
-        width: 0.4rem;
-        height: 3rem;
+        width: 0.1rem;
+        height: 0.75rem;
         background-color: #000;
       }
     }
 
     @element more {
-      padding-right: 2rem;
-      font-size: 2.5rem;
+      padding-right: 0.5rem;
+      font-size: 0.63rem;
       color: #999999;
       text-decoration: none;
-      background: url('../../assets/img/demo/arrow.png') no-repeat  5.5rem 2.6rem;
-      background-size: 1.4rem 2.5rem;
+      background: url('../../assets/img/demo/arrow.png') no-repeat  1.38rem 0.65rem;
+      background-size: 0.35rem 0.63rem;
     }
   }
 </style>

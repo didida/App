@@ -35,20 +35,20 @@
 
 <style lang="css">
   @block navbar {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.13rem;
     border-bottom: 1px solid #ededed;
 
     @element list {
       display: flex;
       margin: 0 auto;
-      width: 60rem;
+      width: 15rem;
 
       @child title {
         flex: 1;
         position: relative;
-        font-size: 3rem;
+        font-size: 0.75rem;
         text-align: center;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.05rem;
 
         @when active {
           color: #f26d4f;
@@ -59,9 +59,9 @@
           display: block;
           position: absolute;
           left: 25%;
-          bottom: -0.7rem;
-          width: 7rem;
-          height: 0.3rem;
+          bottom: -0.17rem;
+          width: 1.75rem;
+          height: 0.07rem;
           background-color: #f26d4f;
         }
       }

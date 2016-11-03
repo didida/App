@@ -20,37 +20,37 @@
     @block item {
       display: flex;
       flex-wrap: wrap;
-      height: 26rem;
+      height: 6.5rem;
     }
 
     @block brand {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
 
       li {
-        padding-top: 2rem;
+        padding-top: 0.5rem;
         width: 20%;
-        height: 10rem;
+        height: 2.5rem;
         text-align: center;
 
         img {
-          width: 5.5rem;
-          height: 5.5rem;
+          width: 1.38rem;
+          height: 1.38rem;
         }
 
         h4 {
           margin: 0;
-          margin-top: 0.5rem;
-          font-size: 2.2rem;
+          margin-top: 0.13rem;
+          font-size: 0.55rem;
           color: #999999;
         }
 
         a {
           display: inline-block;
-          margin-top: 1.7rem;
-          width: 5rem;
-          height: 5rem;
-          font-size: 2.2rem;
+          margin-top: 0.42rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          font-size: 0.55rem;
           color: #999999;
           text-decoration: none;
         }
@@ -58,13 +58,13 @@
     }
 
     @block price {
-      padding-left: 3rem;
-      padding-right: 2rem;
+      padding-left: 0.75rem;
+      padding-right: 0.5rem;
 
       li {
         align-self: center;
-        width: 23rem;
-        font-size: 2.6rem;
+        width: 5.75rem;
+        font-size: 0.65rem;
         color: #999999;
         text-align: center;
       }
@@ -72,13 +72,13 @@
       a {
         color: #999;
         text-decoration: none;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.05rem;
       }
     }
 
     @block models{
-      padding-left: 3rem;
-      padding-right: 2rem;
+      padding-left: 0.75rem;
+      padding-right: 0.5rem;
 
       li {
         width: 20%;
@@ -86,22 +86,22 @@
         text-align: center;
 
         img {
-          width: 7.2rem;
-          height: 2.8rem;
+          width: 1.8rem;
+          height: 0.7rem;
         }
 
         h4 {
           margin: 0;
-          margin-top: 1rem;
-          font-size: 2.2rem;
+          margin-top: 0.25rem;
+          font-size: 0.55rem;
           color: #999999;
         }
 
         a {
           display: inline-block;
-          margin-top: -2rem;
-          width: 5rem;
-          font-size: 2.2rem;
+          margin-top: -0.5rem;
+          width: 1.25rem;
+          font-size: 0.55rem;
           color: #999999;
           text-decoration: none;
         }

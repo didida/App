@@ -54,7 +54,7 @@
   }
 
   .my-swipe {
-    height: 40rem;
+    height: 10rem;
   }
 
   ul, li {
@@ -74,12 +74,12 @@
  }
 
  .app {
-   padding-bottom: 11.6rem;
+   padding-bottom: 2.9rem;
 
    .mint-tabbar {
 
      .mint-tab-item  {
-       padding: 0.5rem 0;
+       padding: 0.13rem 0;
        background-color: #fff;
 
        &.is-selected {
@@ -93,8 +93,8 @@
 
        i {
          display: block;
-         margin-bottom: 1rem;
-         font-size: 4.5rem;
+         margin-bottom: 0.25rem;
+         font-size: 1.13rem;
        }
 
        a {

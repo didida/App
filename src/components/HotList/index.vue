@@ -23,7 +23,7 @@
 
 <style lang="css">
   @block Hotlist {
-    padding-top: 2rem;
+    padding-top: 0.5rem;
     background-color: #f6f6f6;
   }
 </style>
