@@ -1,4 +1,4 @@
-# echebay-mobile
+# Appdemo
 
 > A Vue.js project
 
