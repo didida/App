@@ -1,0 +1,28 @@
+html, body {
+  font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+}
+
+input, textarea{
+  -webkit-appearance: none !important;
+  outline: none;
+}
+
+a, input{
+  -webkit-tap-highlight-color: transparent;
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}

@@ -1,0 +1,33 @@
+{
+  "navbar": [
+    {
+      "title": "品牌"
+    },
+    {
+      "title": "价格"
+    },
+    {
+      "title": "排量"
+    },
+    {
+      "title": "车型"
+    }
+  ],
+  "footerNav": [
+    {
+      "name": "首页",
+      "link": "index",
+      "class": "icon-zhuye"
+    },
+    {
+      "name": "品牌选车",
+      "link": "demo",
+      "class": "icon-chexingxuanze"
+    },
+    {
+      "name": "个人中心",
+      "link": "demo",
+      "class": "icon-gerenzhongxin"
+    }
+  ]
+}
