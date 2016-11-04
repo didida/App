@@ -50,6 +50,7 @@
 
     <Hotlist></Hotlist>
 
+    <e-footer></e-footer>
   </div>
 </template>
 
@@ -60,6 +61,7 @@
   import NavBarContent from '../components/NavBarContent'
   import NavBarContentItem from '../components/NavBarContentItem'
   import Hotlist from '../components/HotList'
+  import EFooter from '../components/Footer'
 
   // Minit-ui
   import { Header, Swipe, SwipeItem } from 'mint-ui'
@@ -74,7 +76,8 @@
       NavBar,
       NavBarContent,
       NavBarContentItem,
-      Hotlist
+      Hotlist,
+      EFooter
     },
 
     data () {

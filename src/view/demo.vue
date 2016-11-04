@@ -5,8 +5,12 @@
 </template>
 
 <script>
-export default {
-}
+  export default {
+    mounted () {
+      console.log(this)
+      this.$parent.$emit('test', 'demo')
+    }
+  }
 </script>
 
 <style lang="css">

@@ -31,6 +31,12 @@
       }
     },
 
+    created () {
+      this.$on('test', (msg) => {
+        this.selected = msg
+      })
+    },
+
     mounted () {
       this.list = footerNav
     },
@@ -74,7 +80,7 @@
  }
 
  .app {
-   padding-bottom: 2.9rem;
+   padding-bottom: 2rem;
 
    .mint-tabbar {
 

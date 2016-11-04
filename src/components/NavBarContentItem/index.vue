@@ -36,6 +36,7 @@
         img {
           width: 1.38rem;
           height: 1.38rem;
+          vertical-align: bottom;
         }
 
         h4 {
@@ -47,10 +48,10 @@
 
         a {
           display: inline-block;
-          margin-top: 0.42rem;
+          margin-top: 0.5rem;
           width: 1.25rem;
           height: 1.25rem;
-          font-size: 0.55rem;
+          font-size: 0.6rem;
           color: #999999;
           text-decoration: none;
         }
@@ -88,6 +89,7 @@
         img {
           width: 1.8rem;
           height: 0.7rem;
+          vertical-align: bottom;
         }
 
         h4 {
@@ -99,9 +101,9 @@
 
         a {
           display: inline-block;
-          margin-top: -0.5rem;
+          margin-top: 0.5rem;
           width: 1.25rem;
-          font-size: 0.55rem;
+          font-size: 0.6rem;
           color: #999999;
           text-decoration: none;
         }
