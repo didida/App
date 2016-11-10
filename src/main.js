@@ -5,7 +5,6 @@ import App from './App.vue'
 
 // 引入Mint-ui
 import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
 
 Vue.use(MintUI)
 
@@ -16,3 +15,6 @@ const app = new Vue({
 })
 
 app.$mount('#app')
+
+import eruda from 'eruda'
+eruda.init()

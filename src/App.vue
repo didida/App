@@ -1,6 +1,8 @@
 <template lang="html">
   <div class="app">
-    <router-view class="warp"></router-view>
+    <transition enter-active-class="warp-transition animated fadeIn" leave-active-class="warp-transition animated fadeOut" mode="out-in">
+      <router-view class="warp"></router-view>
+    </transition>
       <Tabbar fixed v-model="selected">
         <tab-item :id="item.link" v-for="item in list">
           <i class="icon iconfont" :class="item.class"></i>
@@ -12,6 +14,7 @@
 
 <script>
   import 'normalize.css'
+  import 'animate.css'
   import './assets/font/font.css'
   import './assets/font/iconfont.css'
   import './css/index.css'
@@ -32,7 +35,7 @@
     },
 
     created () {
-      this.$on('test', (msg) => {
+      this.$on('footer-nav', (msg) => {
         this.selected = msg
       })
     },
@@ -51,6 +54,7 @@
 
 <style media="screen">
   html, body {
+    height: 100%;
     color: #333;
     font: 400 1em/1.5 PingFang SC,Lantinghei SC,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
   }
@@ -69,7 +73,7 @@
     padding: 0;
   }
 
-  a, li, input, img {
+  div, a, li, input, img {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -80,7 +84,7 @@
  }
 
  .app {
-   padding-bottom: 2rem;
+   padding-bottom: 2.2rem;
 
    .mint-tabbar {
 
@@ -110,5 +114,13 @@
      }
    }
 
+ }
+
+
+ .warp-transition {
+   -webkit-animation-duration: .3s !important;
+   animation-duration: .3s !important;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
  }
 </style>

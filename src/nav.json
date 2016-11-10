@@ -21,13 +21,27 @@
     },
     {
       "name": "品牌选车",
-      "link": "demo",
+      "link": "car",
       "class": "icon-chexingxuanze"
     },
     {
       "name": "个人中心",
       "link": "demo",
       "class": "icon-gerenzhongxin"
+    }
+  ],
+  "BrandCarNav": [
+    {
+      "title": "品牌"
+    },
+    {
+      "title": "价格"
+    },
+    {
+      "title": "车型"
+    },
+    {
+      "title": "排量"
     }
   ]
 }

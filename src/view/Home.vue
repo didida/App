@@ -1,16 +1,20 @@
 <template lang="html">
   <div>
 
+    <!-- banner轮播图 -->
     <swipe class="my-swipe">
       <swipe-item v-for="item in 3">
         <img src="../assets/img/banner.jpg" alt="" />
       </swipe-item>
     </swipe>
 
+    <!-- 搜索框 -->
     <search></search>
 
+    <!-- 首页导航部分 -->
     <nav-bar :active="index" :setIndex="setIndex"></nav-bar>
 
+    <!-- 导航主要筛选部分 -->
     <nav-bar-content>
       <nav-bar-content-item v-if="index === 0" :category="brand">
         <router-link v-for="item in 9" tag="li" to="/">
@@ -48,9 +52,12 @@
       </nav-bar-content-item>
     </nav-bar-content>
 
+    <!-- 底部列表 -->
     <Hotlist></Hotlist>
 
+    <!-- 底部版权部分 -->
     <e-footer></e-footer>
+
   </div>
 </template>
 
@@ -89,6 +96,11 @@
       }
     },
 
+    mounted () {
+      window.scrollTo(0, 0)
+      this.$parent.$emit('footer-nav', 'index')
+    },
+
     methods: {
       setIndex (index) {
         this.index = index
@@ -120,4 +132,5 @@
     }
 
   }
+
 </style>
