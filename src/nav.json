@@ -32,16 +32,21 @@
   ],
   "BrandCarNav": [
     {
-      "title": "品牌"
-    },
-    {
       "title": "价格"
     },
     {
-      "title": "车型"
+      "title": "销量"
     },
     {
       "title": "排量"
+    }
+  ],
+  "CarMainNav": [
+    {
+      "title": "车辆详情"
+    },
+    {
+      "title": "车辆配置"
     }
   ]
 }

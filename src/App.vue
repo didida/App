@@ -3,11 +3,11 @@
     <transition enter-active-class="warp-transition animated fadeIn" leave-active-class="warp-transition animated fadeOut" mode="out-in">
       <router-view class="warp"></router-view>
     </transition>
-      <Tabbar fixed v-model="selected">
-        <tab-item :id="item.link" v-for="item in list">
+      <mt-tabbar fixed v-model="selected">
+        <mt-tab-item :id="item.link" v-for="item in list">
           <i class="icon iconfont" :class="item.class"></i>
           {{item.name}}
-        </tab-item>
+        </mt-tab-item>
       </Tabbar>
   </div>
 </template>
@@ -19,14 +19,8 @@
   import './assets/font/iconfont.css'
   import './css/index.css'
   import { footerNav } from './nav.json'
-  import { Tabbar, TabItem } from 'mint-ui'
 
   export default {
-    components: {
-      Tabbar,
-      TabItem
-    },
-
     data () {
       return {
         selected: 'index',
@@ -36,7 +30,13 @@
 
     created () {
       this.$on('footer-nav', (msg) => {
-        this.selected = msg
+        switch (msg) {
+          case '':
+            this.selected = ''
+            break
+          default:
+            this.selected = msg
+        }
       })
     },
 

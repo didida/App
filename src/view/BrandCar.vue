@@ -7,23 +7,15 @@
       <ul class="BrandCar-nav">
         <drop-down-nav :title="item.title" v-for="(item, $index) in nav" :active="active" @click.native="DropDownNavActive($index, item)">
         </drop-down-nav>
+        <li class="DropDownNav">
+          <h2 class="DropDownNav-title">
+            筛选
+          </h2>
+        </li>
       </ul>
 
-      <!-- 筛选主要内容 -->
-      <!-- <drop-down-main :showMain="showMain" :index="0" :hideMain="hideMain">
-        <ul class="BrandCar-list--main">
-          <li v-for="item in 20">
-            <img src="../assets/img/demo/01.png" alt="" class="BrandCar-list--pic"/>
-            <span class="BrandCar-list--text">长城</span>
-          </li>
-        </ul>
-      </drop-down-main>
-      <drop-down-main :showMain="showMain" :index="1"></drop-down-main>
-      <drop-down-main :showMain="showMain" :index="2"></drop-down-main>
-      <drop-down-main :showMain="showMain" :index="3"></drop-down-main> -->
-
       <!-- 品牌选车列表内容 -->
-      <loadmore :autoFill="false" :bottom-method="loadBottom" @bottom-status-change="handleBottomChange" :bottom-all-loaded="allLoaded" ref="loadmore">
+      <mt-loadmore :autoFill="false" :bottom-method="loadBottom" @bottom-status-change="handleBottomChange" :bottom-all-loaded="allLoaded" ref="loadmore">
         <ul class="BrandCar-main">
           <brand-car-main v-for="item in list">
           </brand-car-main>
@@ -37,7 +29,7 @@
             <mt-spinner type="snake"></mt-spinner>
           </span>
         </div>
-      </loadmore>
+      </mt-loadmore>
 
     </div>
   </div>
@@ -46,18 +38,14 @@
 <script>
 import Search from '../components/Search'
 import DropDownNav from '../components/DropDownNav'
-import DropDownMain from '../components/DropDownMain'
 import BrandCarMain from '../components/BrandCarMain'
 import { BrandCarNav } from '../nav.json'
-import { Loadmore } from 'mint-ui'
 
 export default {
   components: {
     Search,
     DropDownNav,
-    DropDownMain,
-    BrandCarMain,
-    Loadmore
+    BrandCarMain
   },
 
   data () {

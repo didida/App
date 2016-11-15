@@ -1,7 +1,7 @@
 <template lang="html">
-  <div class="navbar">
+  <div class="navbar" :style="{ 'border-bottom': borderBottom }">
     <ul class="navbar-list">
-      <li v-for="(item, $index) in nav" class="navbar-list--title" :class="{'is-active': $index === active}" @click="setIndex($index)">
+      <li v-for="(item, $index) in nav" :style="{ 'height': height, 'line-height': height }" class="navbar-list--title" :class="{'is-active': $index === active, 'is-CarActive': $index === CarActive}" @click="setIndex($index)">
         {{item.title}}
       </li>
     </ul>
@@ -9,8 +9,6 @@
 </template>
 
 <script>
-  import { navbar } from '../../nav.json'
-
   export default {
     props: {
       active: {
@@ -18,17 +16,19 @@
       },
       setIndex: {
         type: Function
+      },
+      nav: {
+        type: Array
+      },
+      CarActive: {
+        type: Number
+      },
+      height: {
+        type: String
+      },
+      borderBottom: {
+        type: String
       }
-    },
-
-    data () {
-      return {
-        nav: []
-      }
-    },
-
-    mounted () {
-      this.nav = navbar
     }
   }
 </script>
@@ -36,7 +36,7 @@
 <style lang="css">
   @block navbar {
     padding-bottom: 0.13rem;
-    border-bottom: 1px solid #ededed;
+    background-color: #fff;
 
     @element list {
       display: flex;
@@ -58,11 +58,26 @@
           content: "";
           display: block;
           position: absolute;
-          left: 25%;
+          left: 26%;
           bottom: -0.17rem;
           width: 1.75rem;
           height: 0.07rem;
           background-color: #f26d4f;
+        }
+
+        @when CarActive {
+          font-weight: bold;
+        }
+
+        @when CarActive:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 26%;
+          bottom: -0.17rem;
+          width: 3.5rem;
+          height: 2px;
+          background-color: #333;
         }
       }
     }

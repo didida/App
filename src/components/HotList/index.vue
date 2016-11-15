@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="Hotlist">
-    <title-bar :title="title" :link="link"></title-bar>
+    <title-bar :title="title" :link="link" v-if="titleShow"></title-bar>
     <div class="Hotlist-main">
-      <router-link to="demo" v-for="item in 6" class="Hotlist-main--list">
+      <router-link :to="{ name: 'carDetails', params: { id: 1 } }" v-for="item in 6" class="Hotlist-main--list">
         <card icon="../../assets/img/01.jpg">
           <h2 slot="title" class="Hotlist-main--title">
             奥迪A4L 2016款 30 TFSI 手动舒适型
@@ -14,7 +14,7 @@
         </card>
       </router-link>
     </div>
-    <router-link to="demo" tag="div" class="Hotlist-more">
+    <router-link :to="{ name: 'car' }" tag="div" class="Hotlist-more">
       查看更多
     </router-link>
   </div>
@@ -25,6 +25,12 @@
   import Card from '../Card'
 
   export default {
+    props: {
+      titleShow: {
+        type: Boolean
+      }
+    },
+
     components: {
       TitleBar,
       Card
@@ -41,7 +47,6 @@
 
 <style lang="css">
   @block Hotlist {
-    padding-top: 0.5rem;
     background-color: #f6f6f6;
 
     @element main {
@@ -57,15 +62,18 @@
       }
 
       @child title {
-        padding: 0.5rem 0.57rem 0.88rem;
+        margin: 0 0.57rem;
+        padding: 0.5rem 0;
         line-height: 1.2;
         color: #343434;
         font-size: 0.65rem;
         font-weight: normal;
+        border-bottom: 1px solid #ededed;
       }
 
       @child num {
         display: flex;
+        padding-top: .38rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
 

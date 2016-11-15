@@ -1,5 +1,5 @@
 <template lang="html">
-  <li class="BrandCar-main--content">
+  <router-link  tag="li" :to="{ name: 'carDetails', params: { id: '1' } }" class="BrandCar-main--content">
     <img src="../../assets/img/02.jpg" alt="" class="BrandCar-main--pic"/>
     <div class="BrandCar-main--text">
       <h2 class="BrandCar-main--title">
@@ -13,10 +13,12 @@
         <span class="r">有现车</span>
       </p>
     </div>
-  </li>
+  </router-link>
 </template>
 
 <script>
+  export default {
+  }
 </script>
 
 <style lang="css">

@@ -2,17 +2,17 @@
   <div>
 
     <!-- banner轮播图 -->
-    <swipe class="my-swipe">
-      <swipe-item v-for="item in 3">
+    <mt-swipe class="my-swipe">
+      <mt-swipe-item v-for="item in 3">
         <img src="../assets/img/banner.jpg" alt="" />
-      </swipe-item>
-    </swipe>
+      </mt-swipe-item>
+    </mt-swipe>
 
     <!-- 搜索框 -->
     <search></search>
 
     <!-- 首页导航部分 -->
-    <nav-bar :active="index" :setIndex="setIndex"></nav-bar>
+    <nav-bar :active="index" :setIndex="setIndex" :nav="navbar" borderBottom="1px solid #ededed"></nav-bar>
 
     <!-- 导航主要筛选部分 -->
     <nav-bar-content>
@@ -53,7 +53,9 @@
     </nav-bar-content>
 
     <!-- 底部列表 -->
-    <Hotlist></Hotlist>
+    <div class="home-Hotlist">
+      <Hotlist :titleShow="true"></Hotlist>
+    </div>
 
     <!-- 底部版权部分 -->
     <e-footer></e-footer>
@@ -70,15 +72,11 @@
   import Hotlist from '../components/HotList'
   import EFooter from '../components/Footer'
 
-  // Minit-ui
-  import { Header, Swipe, SwipeItem } from 'mint-ui'
+  import { navbar } from '../nav.json'
 
   export default {
     components: {
       ENav,
-      MHeader: Header,
-      Swipe,
-      SwipeItem,
       Search,
       NavBar,
       NavBarContent,
@@ -92,13 +90,15 @@
         index: 0,
         brand: 'brand',
         price: 'price',
-        models: 'models'
+        models: 'models',
+        navbar: []
       }
     },
 
     mounted () {
       window.scrollTo(0, 0)
       this.$parent.$emit('footer-nav', 'index')
+      this.navbar = navbar
     },
 
     methods: {
@@ -131,6 +131,11 @@
       }
     }
 
+  }
+
+  .home-Hotlist {
+    padding-top: .5rem;
+    background-color: #f6f6f6;
   }
 
 </style>
