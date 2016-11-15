@@ -97,7 +97,7 @@
       return {
         index: 0,
         CarMainNav: [],
-        popupVisible: true
+        popupVisible: false
       }
     },
 
@@ -126,18 +126,6 @@
 <style lang="css">
   @block CarMain {
     background-color: #f6f6f6;
-
-    .mint-header {
-      height: 2.2rem;
-      line-height: 2.2rem;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      background-image: linear-gradient( -45deg, rgb(142,209,158) 0%, rgb(57,159,203) 100%);
-
-      i {
-        font-size: 0.85rem;
-      }
-    }
 
     .mint-swipe-indicator {
       opacity: 0.8;
@@ -226,10 +214,23 @@
     }
 
     @element buy {
+      padding-bottom: 0.5rem;
       height: 3rem;
       line-height: 3rem;
       text-align: center;
       background-color: #fff;
+    }
+  }
+
+  .mint-header {
+    height: 2.2rem;
+    line-height: 2.2rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    background-image: linear-gradient( -45deg, rgb(142,209,158) 0%, rgb(57,159,203) 100%);
+
+    i {
+      font-size: 0.85rem;
     }
   }
 </style>

@@ -1,6 +1,6 @@
 <template lang="html">
   <button type="button" class="button"
-  :style="{ 'color': color, 'font-size': fontSize, 'height': height, 'line-height': height, 'background-color': backgroundColor }"
+  :style="{ 'color': color, 'font-size': fontSize, 'width': width, 'height': height, 'line-height': height, 'background-color': backgroundColor }"
   :class="{ 'is-big': big, 'is-shadow': shadow, 'is-middle': middle }">
     {{title}}
   </button>
@@ -22,6 +22,10 @@
       },
 
       height: {
+        type: String
+      },
+
+      width: {
         type: String
       },
 
@@ -50,6 +54,10 @@
     border-radius: 0.1rem;
     outline: none;
 
+    &:disabled {
+      background-color: #d3d3d3;
+    }
+
     @when middle {
       width: 11rem;
     }
@@ -59,7 +67,7 @@
     }
 
     @when shadow {
-      box-shadow: 0 1px 16px 0 rgba(242, 109, 79, 0.7);
+      box-shadow: 0 1px 16px 0 rgba(242, 109, 79, 0.5);
     }
   }
 </style>

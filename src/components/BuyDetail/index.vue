@@ -35,13 +35,14 @@
       </div>
     </div>
     <div class="BuyDetail-btn">
-      <confirm-button title="确定" :big="true" height="2rem" fontSize="0.75rem" color="#fff" backgroundColor="#f26d4f"></confirm-button>
+      <confirm-button title="确定" :big="true" height="2rem" fontSize="0.75rem" color="#fff" backgroundColor="#f26d4f" @click.native="success"></confirm-button>
     </div>
   </div>
 </template>
 
 <script>
   import ConfirmButton from '../Button'
+  import { MessageBox } from 'mint-ui'
 
   export default {
     props: {
@@ -84,6 +85,10 @@
         } else {
           this.num ++
         }
+      },
+
+      success () {
+        MessageBox('提示', '提交成功,等待完善')
       }
     }
   }
