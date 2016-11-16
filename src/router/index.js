@@ -8,6 +8,7 @@ import BrandCarDetails from '../view/BrandCarDetails.vue'
 import Personal from '../view/Personal.vue'
 import Landing from '../view/Landing.vue'
 import Registered from '../view/Registered.vue'
+import Retrieve from '../view/Retrieve.vue'
 
 Vue.use(VueRouter)
 
@@ -19,7 +20,8 @@ const router = new VueRouter({
     { name: 'carDetails', path: '/car/:id', component: BrandCarDetails },
     { name: 'personal', path: '/personal', component: Personal, meta: { requiresAuth: true } },
     { name: 'landing', path: '/landing', component: Landing },
-    { name: 'registered', path: '/registered', component: Registered }
+    { name: 'registered', path: '/registered', component: Registered },
+    { name: 'retrieve', path: '/retrieve', component: Retrieve }
   ]
 })
 

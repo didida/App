@@ -1,7 +1,7 @@
 <template lang="html">
   <button type="button" class="button"
   :style="{ 'color': color, 'font-size': fontSize, 'width': width, 'height': height, 'line-height': height, 'background-color': backgroundColor }"
-  :class="{ 'is-big': big, 'is-shadow': shadow, 'is-middle': middle }">
+  :class="{ 'is-big': big, 'is-shadow': shadow, 'is-middle': middle, 'is-confirm': confirm }">
     {{title}}
   </button>
 </template>
@@ -43,6 +43,10 @@
 
       shadow: {
         type: Boolean
+      },
+
+      confirm: {
+        type: Boolean
       }
     }
   }
@@ -68,6 +72,10 @@
 
     @when shadow {
       box-shadow: 0 1px 16px 0 rgba(242, 109, 79, 0.5);
+    }
+
+    @when confirm {
+      border-radius: 0.75rem;
     }
   }
 </style>

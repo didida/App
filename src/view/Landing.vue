@@ -20,7 +20,7 @@
         <router-link to="/registered" class="landing-form--registered">
           注册账号
         </router-link>
-        <router-link to="/">
+        <router-link to="/retrieve">
           忘记密码?
         </router-link>
       </div>

@@ -1,27 +1,23 @@
-# Appdemo
+# vue2.0Demo
 
-> A Vue.js project
+## 项目基于vue2.0 + vue-cli + vue-router2.0 + mint-ui + ES6
 
-## Build Setup
+**注意，本代码纯属个人练手**
 
-``` bash
-# install dependencies
-npm install
+### 安装
 
-# serve with hot reload at localhost:8080
-npm run dev
+#### 通过`npm`安装本地服务器以及安装依赖模块
 
-# build for production with minification
-npm run build
+`npm install`
 
-# run unit tests
-npm run unit
+---
 
-# run e2e tests
-npm run e2e
+#### 启动服务(http://localhost:8888)
 
-# run all tests
-npm test
-```
+`npm run dev`
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+---
+
+#### 发布代码
+
+`npm run build`
